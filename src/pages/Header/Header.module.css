@@ -1,0 +1,48 @@
+.Header {
+    width: 100%;
+    height: 85px;
+    border-bottom: 1px solid #44444447;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0 10%; /* Padding on the sides */
+    background-color: #f7f7f7;
+}
+
+.Header img {
+    width: 150px;
+}
+.main_con {
+    margin-left: auto; /* Pushes .main_con to the right */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.main_con ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.main_con ul li {
+    margin-right: 20px; /* Adjust spacing between list items */
+}
+
+.main_con ul li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+.main_con ul li button {
+    width: 100px;
+    background-color: rgb(1, 100, 248);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px; /* Adjust padding as needed */
+}
+.main_con button:hover{
+    background-color: rgb(5, 73, 174);
+}
