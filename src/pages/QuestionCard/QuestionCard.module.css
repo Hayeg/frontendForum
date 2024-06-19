@@ -1,0 +1,114 @@
+/* hr {
+	color: lightgrey;
+}
+.home__question__display:hover {
+	background-color: #f5f5f5;
+}
+.home__links {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 20px;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	text-align: center;
+}
+.home__links div:not(:first-child) {
+	color: #022553;
+}
+.home__links:hover {
+	color: #022553;
+}
+
+.home__question__display:hover .angle {
+	transform: translateX(10px);
+	transition: 1s;
+}
+.qs__user {
+	margin: 0 10px !important;
+	text-align: left;
+}
+.home__fauser {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+}
+.home__title {
+	text-align: left;
+	width: 100%;
+}
+
+.home__title p {
+	margin: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.home__flex {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+	.home__title {
+		padding: 0px;
+		margin: 0px;
+	}
+	.flexsmall {
+		width: 100%;
+		margin: 0px;
+	}
+	.flexsmall p {
+		margin: 0 20px;
+	}
+} */
+/* //////////////////////////////////////// */
+/*  */
+
+.Iconuser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Comic Sans MS", cursive;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative; /* Add relative positioning */
+}
+
+/* Add horizontal line */
+.Iconuser::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 0.5px; /* Line height */
+  background-color: silver; /* Line color */
+  color: silver;
+}
+.user {
+  margin-left: 10px;
+}
+
+.LeftDivision {
+  flex: 0 1 15%; /* Can shrink but not grow */
+  margin-right: 10px; /* Small space between LeftDivision and Title */
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.MiddleDivision {
+  flex: 0 1 90%; /* Takes 70% of the available space */
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+}

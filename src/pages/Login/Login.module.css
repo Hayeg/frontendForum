@@ -1,4 +1,4 @@
-.main{
+/* .main{
     background-image: URL("../../assets/10002.svg");
     background-position: center;
     background-size: cover;
@@ -117,19 +117,19 @@ a {
 
 .password_input {
   width: 100%;
-  padding-right: 30px; /* Adjust as needed to make space for the icon */
+  padding-right: 30px; 
 }
 
 .icon_button {
   position: absolute;
-  right: 10px; /* Adjust as needed */
+  right: 10px; 
   top: 50%;
   transform: translateY(-50%);
   background-color: #fff;
   cursor: pointer;
   padding: 0;
-  width: 20px; /* Adjust size */
-  height: 20px; /* Adjust size */
+  width: 20px;
+  height: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,4 +140,4 @@ a {
   height: 100%;
 }
 
-
+ */
