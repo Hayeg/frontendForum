@@ -54,11 +54,49 @@ function LoginSignup(props) {
 			navigate("/home");
 			localStorage.setItem("token", data.token);
 		} catch (error) {
-			//alert(error?.response?.data?.message);
+			alert(error?.response?.data?.message);
 			alert(error);
 		}
 	}
 
+	// async function handleSubmitSignup(e) {
+	// 	e.preventDefault();
+
+	// 	const usernamevalue = userNameDOM.current.value;
+	// 	const firstvalue = firstNameDOM.current.value;
+	// 	const lastvalue = lastNameDOM.current.value;
+	// 	const emailsignvalue = emailsignDOM.current.value;
+	// 	const passwordsignvalue = passwordsignDOM.current.value;
+	// 	if (
+	// 		!usernamevalue ||
+	// 		!firstvalue ||
+	// 		!lastvalue ||
+	// 		!emailsignvalue ||
+	// 		!passwordsignvalue
+	// 	) {
+	// 		setmessage(false);
+	// 		setalertt("ALL fields are required");
+	// 		return;
+	// 	}
+	// 	try {
+	// 		await axios.post("/users/register", {
+	// 			username: usernamevalue,
+	// 			firstname: firstvalue,
+	// 			lastname: lastvalue,
+	// 			email: emailsignvalue,
+	// 			password: passwordsignvalue,
+	// 		});
+	// 		// alert("The user already registered");
+	// 		navigate("/");
+	// 	} catch (error) {
+	// 		alert("Something went wrong. Please try again later.");
+	// 		console.log(error);
+	// 	} finally {
+	// 		if (!message) {
+	// 			setIsFirstDivVisible(true);
+	// 		} // Call this function regardless of the outcome
+	// 	}
+	// }
 	async function handleSubmitSignup(e) {
 		e.preventDefault();
 
@@ -89,14 +127,30 @@ function LoginSignup(props) {
 			// alert("The user already registered");
 			navigate("/");
 		} catch (error) {
-			alert("Something went wrong. Please try again later.");
-			console.log(error);
+			if (error.response) {
+				// The request was made and the server responded with a status code
+				// that falls out of the range of 2xx
+				console.log("Error data:", error.response.data);
+				console.log("Error status:", error.response.status);
+				console.log("Error headers:", error.response.headers);
+				alert(`Error: ${error.response.data.message}`);
+			} else if (error.request) {
+				// The request was made but no response was received
+				console.log("Error request:", error.request);
+				alert("No response received from server. Please try again later.");
+			} else {
+				// Something happened in setting up the request that triggered an Error
+				console.log("Error message:", error.message);
+				alert("Something went wrong. Please try again later.");
+			}
+			console.log("Error config:", error.config);
 		} finally {
 			if (!message) {
 				setIsFirstDivVisible(true);
 			} // Call this function regardless of the outcome
 		}
 	}
+
 
 	return (
 		<div className={classes.main_container}>
@@ -266,3 +320,4 @@ function LoginSignup(props) {
 }
 
 export default LoginSignup;
+
