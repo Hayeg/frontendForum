@@ -1,11 +1,11 @@
 import React, { useEffect, useState, createContext } from "react";
 import Home from "./Pages/Home/Home";
 import { Route, Routes, useNavigate, Router } from "react-router-dom";
-import Question from ".././src/Pages/Question/Question";
-import Layout from "../src/Pages/Layout/Layout";
-import Answer from "../src/Pages/Answer/Answer";
-import LoginSignup from "../src/Pages/LoginSignup/LoginSignup";
-import Terms from "../src/Pages/Terms/Terms";
+import Question from "./Pages/Question/Question";
+import Layout from "./Pages/Layout/Layout";
+import Answer from "./Pages/Answer/Answer";
+import LoginSignup from "./Pages/LoginSignup/LoginSignup";
+import Terms from "./Pages/Terms/Terms";
 import axios from "./axios/axiosConfig";
 export const Appstate = createContext();
 function App() {
