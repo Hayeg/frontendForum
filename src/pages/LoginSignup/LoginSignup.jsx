@@ -50,7 +50,6 @@ function LoginSignup(props) {
 				email: emailvalue,
 				password: passwordvalue,
 			});
-			alert("Login succesfull");
 			navigate("/home");
 			localStorage.setItem("token", data.token);
 		} catch (error) {
@@ -58,45 +57,6 @@ function LoginSignup(props) {
 			alert(error);
 		}
 	}
-
-	// async function handleSubmitSignup(e) {
-	// 	e.preventDefault();
-
-	// 	const usernamevalue = userNameDOM.current.value;
-	// 	const firstvalue = firstNameDOM.current.value;
-	// 	const lastvalue = lastNameDOM.current.value;
-	// 	const emailsignvalue = emailsignDOM.current.value;
-	// 	const passwordsignvalue = passwordsignDOM.current.value;
-	// 	if (
-	// 		!usernamevalue ||
-	// 		!firstvalue ||
-	// 		!lastvalue ||
-	// 		!emailsignvalue ||
-	// 		!passwordsignvalue
-	// 	) {
-	// 		setmessage(false);
-	// 		setalertt("ALL fields are required");
-	// 		return;
-	// 	}
-	// 	try {
-	// 		await axios.post("/users/register", {
-	// 			username: usernamevalue,
-	// 			firstname: firstvalue,
-	// 			lastname: lastvalue,
-	// 			email: emailsignvalue,
-	// 			password: passwordsignvalue,
-	// 		});
-	// 		// alert("The user already registered");
-	// 		navigate("/");
-	// 	} catch (error) {
-	// 		alert("Something went wrong. Please try again later.");
-	// 		console.log(error);
-	// 	} finally {
-	// 		if (!message) {
-	// 			setIsFirstDivVisible(true);
-	// 		} // Call this function regardless of the outcome
-	// 	}
-	// }
 	async function handleSubmitSignup(e) {
 		e.preventDefault();
 
@@ -125,7 +85,7 @@ function LoginSignup(props) {
 				password: passwordsignvalue,
 			});
 			// alert("The user already registered");
-			navigate("/");
+			navigate("/home");
 		} catch (error) {
 			if (error.response) {
 				// The request was made and the server responded with a status code
